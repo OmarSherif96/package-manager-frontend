@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.header-title {
+  font-size: bolder;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', 'Arial', 'sans-serif';
+  display: flex;
+  position: relative;
+  top: 0.2rem;
+}
+
+#header-app {
+  background-color: #223c6b;
+}
+
+#header-panels {
+  background-color: white;
+}
+
+.bx--header-panel--expanded {
+  background-color: white;
+}
+
+#console-icon {
+  position: relative;
+  bottom: 0.3rem;
+}

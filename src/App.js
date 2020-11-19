@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import Header from './components/Layout/Header/Header';
+import { PackageContainer } from './components/Package/PackageContainer';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import PackageDetails from './components/Package/Details/PackageDetails';
 import './App.css';
+import './index.scss';
+import CartModal from './components/Cart/CartModal/CartModal';
+import { connect } from 'react-redux';
 
-function App() {
+function App({ cartIsOpen }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div id='background'></div>
+      <div className='container'>
+        <CartModal open={cartIsOpen}></CartModal>
+        <BrowserRouter>
+          <Header></Header>
+
+          <Switch>
+            <Route path='/' component={PackageContainer} exact></Route>
+            <Route path='/newPackage' component={PackageDetails} exact></Route>
+            <Route path='/details/:id' component={PackageDetails}></Route>
+            <Route
+              path='/marketplace'
+              component={PackageContainer}
+              exact
+            ></Route>
+          </Switch>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  cartIsOpen: state.cartReducer.cartIsOpen,
+});
+
+export default connect(mapStateToProps, {})(App);

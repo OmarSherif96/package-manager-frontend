@@ -1,0 +1,12 @@
+.total-price {
+  font-size: 1rem;
+}
+
+.discount {
+  font-size: 1.2rem;
+}
+
+.bx--modal-container {
+  width: 120%;
+  /* height: 150%; */
+}

@@ -1,0 +1,11 @@
+@import 'carbon-components/scss/globals/scss/styles.scss';
+@import '~carbon-components/scss/globals/grid/grid';
+@import '@carbon/grid/scss/grid';
+
+
+$feature-flags: (
+ components-x:true,
+ breaking-changes-x:true,
+ grid-columns-16:true,
+ ui-shell:true
+);

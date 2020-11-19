@@ -1,0 +1,26 @@
+.package-details-container {
+  position: relative;
+  top: 6rem;
+}
+
+#details-tile {
+  background-color: white;
+  height: 28rem;
+}
+
+#products-list {
+  width: 20rem;
+}
+
+#buttons-set {
+  margin-top: 2rem;
+}
+
+#image-card {
+  border: 8px solid #f0f0f0;
+}
+
+#card-button-details {
+  position: relative;
+  left: 15%;
+}
