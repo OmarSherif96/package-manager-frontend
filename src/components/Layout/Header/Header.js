@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Header as CarbonHeader,
   HeaderGlobalAction,
@@ -13,7 +13,6 @@ import { connect } from 'react-redux';
 import { toggleCart } from '../../../store/actions/cartActions';
 
 const Header = ({ history, selectedPackages, toggleCart }) => {
-  const [expanded, setExpanded] = useState(false);
   const packageCount = selectedPackages.length;
   return (
     <CarbonHeader id='header-app' aria-label=''>

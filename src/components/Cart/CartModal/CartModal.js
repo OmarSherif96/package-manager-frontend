@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Modal } from 'carbon-components-react';
 import { connect } from 'react-redux';
 import { toggleCart } from '../../../store/actions/cartActions';
